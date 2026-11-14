@@ -466,7 +466,7 @@ function App() {
           <div className="mouse-tip">
             {document.pointerLockElement
               ? ""
-              : "CLICK THE SCENE TO AIM · ESC TO RELEASE"}
+              : "CLICK THE SCENE TO AIM AND FIRE · ESC TO RELEASE"}
           </div>
         </>
       ) : panel === "debrief" && r ? (

@@ -2,6 +2,12 @@
 
 ## Cloud deployment independent of the developer PC
 
+### Railway
+
+`railway.json` selects the existing Node 24 Dockerfile and `/api/health` check. In an eligible Railway workspace, create a new project from `Goodyness-dev/aftermarket`, use one replica and generate an HTTP public domain targeting the platform's PORT. Docker defaults already bind to 0.0.0.0 with NEAR_LIVE_DEMO=0. Never upload local testnet keys. Attach one volume at `/app/data` for retained practice saves; verify that the container's node user can write the mount before calling storage persistent. Without a volume, saves are ephemeral. Keep application sleeping/serverless mode disabled if continuous service is required. Provisioning and usage consume the account's available credits or paid budget; the config file does not grant free capacity. The first inspected workspace reported Trial expired, so no service was created there.
+
+The user is selecting an eligible hosting account. There is no verified cloud game URL yet. See [Oracle setup](ORACLE_HOSTING.md) for the prepared Always Free VM alternative; account verification and capacity remain prerequisites.
+
 The public repository is https://github.com/Goodyness-dev/aftermarket. `render.yaml` defines a free Node 24 web service, including the real backend, WebSockets, production build and health check. Open https://render.com/deploy?repo=https://github.com/Goodyness-dev/aftermarket, sign in to your own Render account, review the free service, and deploy. This is a deployment setup link, not an already deployed game URL. Retain the service's actual `onrender.com` URL after Render reports Live.
 
 The free service works independently of this PC, but sleeps after 15 idle minutes and wakes on a request. Its practice saves are ephemeral and can reset on restarts/redeploys; no persistent progress is promised on that plan. For retained saves and no idle sleep, choose a paid instance and persistent disk only after approving the current price, set DATA_DIR to the writable disk mount, and keep one replica. No paid resources have been authorized or created.

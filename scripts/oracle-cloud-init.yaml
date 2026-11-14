@@ -1,0 +1,34 @@
+#cloud-config
+# Ubuntu 24.04, Oracle Always Free VM. No credentials belong in this file.
+# Creates one public practice service, with persistent local SQLite storage.
+package_update: true
+packages:
+  - docker.io
+  - git
+  - curl
+  - ca-certificates
+write_files:
+  - path: /etc/systemd/system/aftermarket.service
+    permissions: '0644'
+    content: |
+      [Unit]
+      Description=AFTERMARKET public practice game
+      After=docker.service network-online.target
+      Requires=docker.service
+      [Service]
+      Restart=always
+      RestartSec=10
+      ExecStart=/usr/bin/docker run --rm --name aftermarket --publish 80:3000 --env NODE_ENV=production --env HOST=0.0.0.0 --env PORT=3000 --env NEAR_LIVE_DEMO=0 --env DATA_DIR=/app/data --mount type=volume,source=aftermarket-data,target=/app/data --memory=768m --memory-swap=1536m aftermarket:submission
+      ExecStop=/usr/bin/docker stop -t 20 aftermarket
+      TimeoutStopSec=30
+      [Install]
+      WantedBy=multi-user.target
+runcmd:
+  - systemctl enable --now docker
+  # Low-memory AMD free VMs need swap for the browser bundle build.
+  - [sh, -c, 'if ! swapon --show | grep -q /swapfile; then fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo "/swapfile none swap sw 0 0" >> /etc/fstab; fi']
+  - [git, clone, --depth, '1', 'https://github.com/Goodyness-dev/aftermarket.git', /opt/aftermarket]
+  - [sh, -c, 'cd /opt/aftermarket && docker build -t aftermarket:submission .']
+  - systemctl daemon-reload
+  - systemctl enable --now aftermarket
+  - [sh, -c, 'curl --retry 20 --retry-delay 3 --retry-connrefused --fail http://127.0.0.1/api/health']

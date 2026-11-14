@@ -1,6 +1,6 @@
 {
   "status": "prepared-for-human-review-not-published",
-  "generatedAt": "2026-11-14T18:21:10.344Z",
+  "generatedAt": "2026-11-14T18:41:50.719Z",
   "excluded": [
     "node_modules",
     "target",
@@ -60,8 +60,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7433,
-      "sha256": "be60a6ec3c5826c4a05ed07ce5c11657ddd6ed19a68589748dd310f7296ce7d8"
+      "bytes": 7294,
+      "sha256": "fe19e66a627a7afb93a5119d55d677fde5b74b1320985d62fe43723e3a7b89d5"
     },
     {
       "path": "VISUAL_DIRECTION.md",
@@ -110,8 +110,13 @@
     },
     {
       "path": "docs/HOSTING.md",
-      "bytes": 4194,
-      "sha256": "89e2a7dd931b6759bae033a4bd8b9252374fddd490c1bb109ecfa0da9d78c3bc"
+      "bytes": 5279,
+      "sha256": "3c57db825da50beac1794d12a7972607e6646293c00139a066aa426aa1c00b35"
+    },
+    {
+      "path": "docs/ORACLE_HOSTING.md",
+      "bytes": 3020,
+      "sha256": "14f8481921541f26cedaccdca8ec3c799ea9f2b880c83c6fe4db53d461da0e6c"
     },
     {
       "path": "docs/PRODUCTION_API_VERIFIED.json",
@@ -309,6 +314,11 @@
       "sha256": "cfd2dbcdf9e022298efc9021c62ca0887b09cc49146f5be98fc7ec3d3b41cf66"
     },
     {
+      "path": "railway.json",
+      "bytes": 291,
+      "sha256": "016d40eb47e5cbdebf0bf5f119a0f239724b1ee3c9ba38b1ee5fa4899fcdbb66"
+    },
+    {
       "path": "render.yaml",
       "bytes": 568,
       "sha256": "7ca2946538f3b81306857cdf3df50b2916c36c3a56d43499a91838363d922e00"
@@ -324,6 +334,11 @@
       "sha256": "ef71e30d1f378c2f1d101bd466f135fd8b1500f33d25e21bc92e15cd507a3e08"
     },
     {
+      "path": "scripts/oracle-cloud-init.yaml",
+      "bytes": 1648,
+      "sha256": "2b92b1822d4b1aae2707c7e6e02270fc521e82f860dd140aa829dfd4482a55bc"
+    },
+    {
       "path": "scripts/package-source.mjs",
       "bytes": 3307,
       "sha256": "be90b222f24edec93796f73d414e9ea5c2d6c1cc66c6bbe4b0e73a41edd71671"
@@ -335,8 +350,8 @@
     },
     {
       "path": "scripts/release-review.mjs",
-      "bytes": 2613,
-      "sha256": "9718daaa71d974d7e845058aeb993ec32ba45c1067ebe53c4901fddbd81df184"
+      "bytes": 2628,
+      "sha256": "91aa7b678c22452e29822e21c85d66e7c57aee4ff70079aa1a738dce08984df9"
     },
     {
       "path": "scripts/smoke-live-api.mjs",
@@ -385,8 +400,8 @@
     },
     {
       "path": "src/client/main.tsx",
-      "bytes": 43867,
-      "sha256": "7541b9cf50749a0fd236618e63758aea1e72de79fbd4f494abcf290bac5e0b97"
+      "bytes": 43876,
+      "sha256": "d83b132825f3f193e40a398679ce04abc7d410df54c0541ee22493d50b24a5a8"
     },
     {
       "path": "src/client/near.ts",
@@ -395,13 +410,13 @@
     },
     {
       "path": "src/client/scene.ts",
-      "bytes": 26691,
-      "sha256": "c194320c3880a2b4704b6e830ac4125dde2ed3d1e989e6723b9752f6f35ffaef"
+      "bytes": 27181,
+      "sha256": "33f733dbcc1244245ff2d3502e8c6df329b5c8123ff15810d7952fb18daa8690"
     },
     {
       "path": "src/client/style.css",
-      "bytes": 28149,
-      "sha256": "3be63278b5bda093dab31ef2dcfbd6d74d03873f9fa458e1f57c20c14d45bf82"
+      "bytes": 28221,
+      "sha256": "97d3e6828cc6741db104529b6de61ad11c5cfbb027778c24455c1e0d16996c5d"
     },
     {
       "path": "src/domain/game.ts",

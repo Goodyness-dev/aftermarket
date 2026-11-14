@@ -4,7 +4,7 @@ A third-person extraction shooter prototype with a persistent local weapons econ
 
 ## Run
 
-Public source: [Goodyness-dev/aftermarket](https://github.com/Goodyness-dev/aftermarket). For cloud practice hosting independent of the developer PC, use [Deploy on Render](https://render.com/deploy?repo=https://github.com/Goodyness-dev/aftermarket). The checked-in blueprint selects the free Node web service; it sleeps when idle and practice saves can reset on restart. This button prepares deployment in your Render account; it is not an already deployed game. See [hosting details](docs/HOSTING.md).
+Public source: [Goodyness-dev/aftermarket](https://github.com/Goodyness-dev/aftermarket). The repository includes Railway/Docker deployment configuration and an Oracle Always Free VM setup. Cloud practice hosting needs an eligible account, available compute and a verified deployment; no permanent hosted URL is claimed yet. See [hosting details](docs/HOSTING.md).
 
 Requires Node.js 24 or newer (uses the bundled `node:sqlite` module).
 

@@ -995,6 +995,7 @@ progress::-webkit-progress-value {
 }
 .objective {
   position: fixed !important;
+  pointer-events: none;
   top: 115px;
   left: 40px;
   padding: 16px 20px;
@@ -1101,6 +1102,7 @@ progress::-webkit-progress-value {
   margin-top: 8px;
 }
 .interact {
+  pointer-events: none;
   position: fixed !important;
   top: 58%;
   left: 50%;
@@ -1133,6 +1135,7 @@ kbd {
   margin-top: 5px;
 }
 .extracting {
+  pointer-events: none;
   position: fixed !important;
   top: 30%;
   left: 50%;

@@ -13,3 +13,5 @@ The goal is active and incomplete. This checkpoint describes the current vertica
 Combat-feedback follow-up: simultaneous guard shots previously shared IDs. IDs now have distinct guard slots and separate event timestamps; old events are filtered instead of replayed as stale tracers/audio. The focused simultaneous-fire test passes and the production build succeeds. Rebuilds update dist; a running server process must be restarted to load changed server JavaScript.
 
 No repository has been pushed/published and no hackathon application has been sent. Testnet credentials remain outside the repository. Regenerate RELEASE_REVIEW.json after final source/document changes.
+
+Source reproducibility: an immutable 89-file reviewed archive was extracted and verified byte-for-byte, then passed `npm ci`, all 24 tests and `npm run build` from that clean extraction. See REPRODUCIBILITY.json and PUBLICATION_REVIEW.md. The proposed GitHub repository is not created. Public hosting, final video and human publication/submission approvals are still outstanding.

@@ -629,6 +629,7 @@ export function createGame(
   let socket: WebSocket | null = null;
   let seq = 0;
   let shooting = false;
+  let queuedShot = false;
   let needReload = false,
     interact = false;
   const keys = new Set<string>();
@@ -648,20 +649,30 @@ export function createGame(
   };
   const down = (e: MouseEvent) => {
     audio.unlock();
-    if (e.button === 0 && read().active) {
-      if (document.pointerLockElement !== canvas) canvas.requestPointerLock();
-      else shooting = true;
-    }
+    const state = read();
+    if (e.button !== 0 || !state.active || state.paused) return;
+    e.preventDefault();
+    shooting = true;
+    queuedShot = true;
+    if (document.pointerLockElement !== canvas)
+      void Promise.resolve(canvas.requestPointerLock()).catch(() => {
+        shooting = false;
+      });
   };
   const up = () => (shooting = false);
+  const lockChange = () => {
+    if (document.pointerLockElement !== canvas) shooting = false;
+  };
   window.addEventListener("keydown", keydown);
   window.addEventListener("keyup", keyup);
   window.addEventListener("mousemove", move);
   canvas.addEventListener("mousedown", down);
   window.addEventListener("mouseup", up);
+  document.addEventListener("pointerlockchange", lockChange);
   const blur = () => {
     keys.clear();
     shooting = false;
+    queuedShot = false;
   };
   window.addEventListener("blur", blur);
   const interval = setInterval(() => {
@@ -677,13 +688,14 @@ export function createGame(
         forward: (keys.has("KeyW") ? 1 : 0) - (keys.has("KeyS") ? 1 : 0),
         strafe: (keys.has("KeyD") ? 1 : 0) - (keys.has("KeyA") ? 1 : 0),
         yaw,
-        shoot: shooting,
+        shoot: shooting || queuedShot,
         reload: needReload,
         interact,
       }),
     );
     needReload = false;
     interact = false;
+    queuedShot = false;
   }, 50);
   let appliedQuality = "",
     lastEconomy = "",
@@ -913,6 +925,7 @@ export function createGame(
       socket = ws;
     },
     reset() {
+      blur();
       yaw = 0;
       pitch = 0.12;
       seq = 0;
@@ -931,6 +944,7 @@ export function createGame(
       window.removeEventListener("mousemove", move);
       canvas.removeEventListener("mousedown", down);
       window.removeEventListener("mouseup", up);
+      document.removeEventListener("pointerlockchange", lockChange);
       window.removeEventListener("resize", resize);
       window.removeEventListener("blur", blur);
       avatar.dispose();
