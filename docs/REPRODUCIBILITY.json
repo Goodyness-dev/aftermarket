@@ -1,0 +1,22 @@
+{
+  "status": "verified-clean-source-candidate",
+  "candidateArchive": "aftermarket-source-2026-11-14T13-38-41-942Z.tar.gz",
+  "candidateSha256": "88808549a2175631f181e0fc5c19c51329f8060d8b40dce72f15846fd88d7607",
+  "candidateFiles": 89,
+  "candidateBytes": 5570475,
+  "environment": "Windows, Node.js 24",
+  "checks": {
+    "archiveEntriesMatchReviewedPaths": true,
+    "extractedFileHashesMatch": true,
+    "npmCi": "passed, 159 packages installed",
+    "npmTest": "24 passed, 0 failed",
+    "npmRunBuild": "passed, Vite client and compiled Node server"
+  },
+  "limits": [
+    "This is a source reproducibility check, not a container execution check.",
+    "The renderer bundle-size warning remains.",
+    "No account credentials or saved worlds were included.",
+    "Live signing mode needs the prepared credentials on the authorized local machine.",
+    "This supporting record was written after the named archive was built."
+  ]
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { DemoRecorder } from "./DemoRecorder";
 import type { createGame } from "./scene";
 import {
   MODELS,
@@ -1168,4 +1169,4 @@ function App() {
     </div>
   );
 }
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(<><App /><DemoRecorder /></>);

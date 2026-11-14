@@ -1,6 +1,6 @@
 {
   "status": "prepared-for-human-review-not-published",
-  "generatedAt": "2026-11-14T13:38:40.972Z",
+  "generatedAt": "2026-11-14T18:21:10.344Z",
   "excluded": [
     "node_modules",
     "target",
@@ -60,8 +60,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6927,
-      "sha256": "cbd33b770362124fe1f093061431389b516f573e797b40d6f2a1b2937e593c6c"
+      "bytes": 7433,
+      "sha256": "be60a6ec3c5826c4a05ed07ce5c11657ddd6ed19a68589748dd310f7296ce7d8"
     },
     {
       "path": "VISUAL_DIRECTION.md",
@@ -105,18 +105,28 @@
     },
     {
       "path": "docs/GOAL_PROGRESS.md",
-      "bytes": 2844,
-      "sha256": "25539d0c4cc345a0cbc0a3f987533040101e12f7e2b9750181efb01d451c7402"
+      "bytes": 3225,
+      "sha256": "118ec107692597b65954e86f5fc1a61c5637cf6c8e0ff8f7bfbb1b5a9b209d2c"
     },
     {
       "path": "docs/HOSTING.md",
-      "bytes": 2287,
-      "sha256": "709c616698f6dd81f7808697623f1b25cf891333e9de22432d4b420d013c5bd7"
+      "bytes": 4194,
+      "sha256": "89e2a7dd931b6759bae033a4bd8b9252374fddd490c1bb109ecfa0da9d78c3bc"
     },
     {
       "path": "docs/PRODUCTION_API_VERIFIED.json",
       "bytes": 698,
       "sha256": "f31cc64984fe669678929e4400d48ac154f3a0096244f52ea9b6697273550edb"
+    },
+    {
+      "path": "docs/PUBLICATION_REVIEW.md",
+      "bytes": 1524,
+      "sha256": "a48fa783662cadcf63d4f6bf9c227ae202153e31e205979ccf166fef79958ed5"
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.json",
+      "bytes": 936,
+      "sha256": "c020889dd5795a964c10755a49aa25a74cce6941c908a7ebb0e3f8ed73c7f63c"
     },
     {
       "path": "docs/SUBMISSION_CHECKLIST.md",
@@ -299,6 +309,11 @@
       "sha256": "cfd2dbcdf9e022298efc9021c62ca0887b09cc49146f5be98fc7ec3d3b41cf66"
     },
     {
+      "path": "render.yaml",
+      "bytes": 568,
+      "sha256": "7ca2946538f3b81306857cdf3df50b2916c36c3a56d43499a91838363d922e00"
+    },
+    {
       "path": "scripts/contract.ps1",
       "bytes": 849,
       "sha256": "4b3440d0f49bb650b16776bc8e86b2302c29741be645cba98d8d44efcb277718"
@@ -320,8 +335,8 @@
     },
     {
       "path": "scripts/release-review.mjs",
-      "bytes": 2599,
-      "sha256": "982cf6f449a6f70ca6a75f483072cd95f8e34040d547896cb36f92b28918eeb7"
+      "bytes": 2613,
+      "sha256": "9718daaa71d974d7e845058aeb993ec32ba45c1067ebe53c4901fddbd81df184"
     },
     {
       "path": "scripts/smoke-live-api.mjs",
@@ -342,6 +357,11 @@
       "path": "src/client/ChainPanel.tsx",
       "bytes": 4132,
       "sha256": "02f4516b3ca78247e19d8f258d4908055f52a9b03905271b7c97e669d121f2e8"
+    },
+    {
+      "path": "src/client/DemoRecorder.tsx",
+      "bytes": 2153,
+      "sha256": "80ad078eaf6bc5bc7d5a51a6963e54326a22dbf9e825c643337cb8b548794d40"
     },
     {
       "path": "src/client/InspectionBoundary.tsx",
@@ -365,8 +385,8 @@
     },
     {
       "path": "src/client/main.tsx",
-      "bytes": 43799,
-      "sha256": "9e1114b981925c665d58adb995e61f01fded957b27ce7404961585d6bf4f465a"
+      "bytes": 43867,
+      "sha256": "7541b9cf50749a0fd236618e63758aea1e72de79fbd4f494abcf290bac5e0b97"
     },
     {
       "path": "src/client/near.ts",

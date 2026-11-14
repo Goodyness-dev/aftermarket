@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 const root = resolve(import.meta.dirname, '..');
 const excluded = new Set(['node_modules', 'target', 'data', 'dist', 'build', '.git']);
 const directories = ['src', 'tests', 'scripts', 'contracts', 'public', 'assets', 'docs'];
-const rootFiles = ['package.json','package-lock.json','tsconfig.json','tsconfig.server.json','vite.config.ts','index.html','Dockerfile','compose.yaml','.dockerignore','.gitignore','.env.example','LICENSE','README.md','MASTER_GAME_DESIGN.md','VISUAL_DIRECTION.md','IMPLEMENTATION_PLAN.md','GAME_DESIGN.md','HACKATHON.md'];
+const rootFiles = ['package.json','package-lock.json','tsconfig.json','tsconfig.server.json','vite.config.ts','index.html','Dockerfile','compose.yaml','render.yaml','.dockerignore','.gitignore','.env.example','LICENSE','README.md','MASTER_GAME_DESIGN.md','VISUAL_DIRECTION.md','IMPLEMENTATION_PLAN.md','GAME_DESIGN.md','HACKATHON.md'];
 const paths = [];
 async function walk(directory) {
   for (const entry of await readdir(join(root, directory), { withFileTypes: true })) {

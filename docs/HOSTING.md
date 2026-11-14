@@ -1,5 +1,19 @@
 # Persistent hosting
 
+## Cloud deployment independent of the developer PC
+
+The public repository is https://github.com/Goodyness-dev/aftermarket. `render.yaml` defines a free Node 24 web service, including the real backend, WebSockets, production build and health check. Open https://render.com/deploy?repo=https://github.com/Goodyness-dev/aftermarket, sign in to your own Render account, review the free service, and deploy. This is a deployment setup link, not an already deployed game URL. Retain the service's actual `onrender.com` URL after Render reports Live.
+
+The free service works independently of this PC, but sleeps after 15 idle minutes and wakes on a request. Its practice saves are ephemeral and can reset on restarts/redeploys; no persistent progress is promised on that plan. For retained saves and no idle sleep, choose a paid instance and persistent disk only after approving the current price, set DATA_DIR to the writable disk mount, and keep one replica. No paid resources have been authorized or created.
+
+Public mode deliberately uses NEAR_LIVE_DEMO=0. It supports playable practice and confirmed testnet reads; the existing custodial testnet pilot stays local. Hosting alone does not add independent player signing or authentication.
+
+The temporary trycloudflare.com demo runs from this PC and stops when the PC/server/tunnel stops. It is not a substitute for the cloud deployment above.
+
+## Recording without posting
+
+Open the running game's `/?record=1` URL. Click RECORD THIS TAB, select the tab showing AFTERMARKET in the browser capture chooser, then click Share. Play the demo and click STOP & SAVE DEMO. The browser downloads AFTERMARKET-gameplay-economy.webm. Recording has no microphone and uploads nothing. If the browser does not support tab recording, record the game with a local screen recorder. The human reviews the video and posts it on X themselves.
+
 The app needs a long-running Node 24 service with WebSocket support and persistent disk. A static upload of `dist` cannot serve raids or saves.
 
 `npm run build` produces browser assets in `dist` and executable server JavaScript in `build`. `NODE_ENV=production npm start` runs the compiled server without tsx. Set `HOST=0.0.0.0`, the platform's `PORT`, and `DATA_DIR` to a mounted persistent directory for public practice hosting. Use one replica: the session cache and game loop are currently process-local.
@@ -10,6 +24,6 @@ Public hosting keeps `NEAR_LIVE_DEMO=0`. The server refuses to expose the custod
 
 Back up SQLite with its backup API or stop the service before copying the database; copying only the main database while WAL writes are active can omit recent changes. Preserve the signed-transaction outbox and command records with the game database. On restart, pending operations reconcile the same signed bytes.
 
-No public hosting service has been provisioned or published. Repository publication/push and any charged hosting plan require the corresponding authorization. The local production preview is the current reviewable deployment target.
+The repository has been published with explicit user approval. Permanent cloud deployment still requires the hosting account and a successful Live status; the blueprint alone does not prove deployment. Any charged hosting plan requires its own spending authorization.
 
 Docker validation attempt: `docker desktop start --timeout 30` opened an unexpected-error dialog. Docker could not initialize its secrets-engine Unix socket because the socket rename was inaccessible. The engine API remained unavailable. No factory reset, credential change, configuration change or diagnostic upload was performed. Container execution remains unverified until Docker's startup problem is resolved; the local Node service continues independently.
