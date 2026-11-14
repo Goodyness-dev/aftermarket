@@ -1,0 +1,96 @@
+{
+  "rpcUrl": "https://test.rpc.fastnear.com",
+  "verificationScope": "current ownership and conserved supply after gameplay",
+  "status": "verified",
+  "network": "testnet",
+  "contractId": "aftermarket-f33ee39d.testnet",
+  "verifiedAt": "2026-11-14T03:15:45.372Z",
+  "codeHash": "ACtLBABghdJcVBvM656Q9mRGnbCb9sT3zzekd5vPfUhc",
+  "wasmSha256": "88c49c667165b2718999f9820af52c506d6af24c9a3a16f02379f9233557136f",
+  "rootAllocatedYocto": "5701261668574830800000000",
+  "accounts": {
+    "owner": {
+      "accountId": "aftermarket-f33ee39d.testnet",
+      "availableYocto": "4298738331425169200000000",
+      "storageBytes": 475221,
+      "codeHash": "ACtLBABghdJcVBvM656Q9mRGnbCb9sT3zzekd5vPfUhc"
+    },
+    "operator": {
+      "accountId": "operator.aftermarket-f33ee39d.testnet",
+      "availableYocto": "143221544328173500000000",
+      "storageBytes": 182,
+      "codeHash": "11111111111111111111111111111111"
+    },
+    "mara": {
+      "accountId": "mara.aftermarket-f33ee39d.testnet",
+      "availableYocto": "147818735467289500000000",
+      "storageBytes": 182,
+      "codeHash": "11111111111111111111111111111111"
+    },
+    "ivo": {
+      "accountId": "ivo.aftermarket-f33ee39d.testnet",
+      "availableYocto": "148180000000000000000000",
+      "storageBytes": 182,
+      "codeHash": "11111111111111111111111111111111"
+    },
+    "sable": {
+      "accountId": "sable.aftermarket-f33ee39d.testnet",
+      "availableYocto": "148180000000000000000000",
+      "storageBytes": 182,
+      "codeHash": "11111111111111111111111111111111"
+    },
+    "harbor": {
+      "accountId": "harbor.aftermarket-f33ee39d.testnet",
+      "availableYocto": "148180000000000000000000",
+      "storageBytes": 182,
+      "codeHash": "11111111111111111111111111111111"
+    },
+    "pilot": {
+      "accountId": "pilot.aftermarket-f33ee39d.testnet",
+      "availableYocto": "147242730847963500000000",
+      "storageBytes": 182,
+      "codeHash": "11111111111111111111111111111111"
+    }
+  },
+  "balances": {
+    "pilot": "1420",
+    "mara": "2550",
+    "ivo": "1600",
+    "sable": "1300",
+    "harbor": "1550"
+  },
+  "budgets": {
+    "mara": "1900",
+    "ivo": "1600",
+    "sable": "1300",
+    "harbor": "1550"
+  },
+  "tokens": [
+    {
+      "token_id": "DP-0042",
+      "owner_id": "pilot.aftermarket-f33ee39d.testnet",
+      "model": "pistol",
+      "condition": 100,
+      "unique": true
+    },
+    {
+      "token_id": "R-042",
+      "owner_id": "pilot.aftermarket-f33ee39d.testnet",
+      "model": "rifle",
+      "condition": 100,
+      "unique": true
+    }
+  ],
+  "supply": [
+    "8420",
+    "1",
+    "1",
+    "160",
+    "8"
+  ],
+  "pilotStacks": [
+    "1",
+    "160",
+    "8"
+  ]
+}

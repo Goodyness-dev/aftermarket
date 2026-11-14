@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "prototype-human",
+      "path": "/assets/character.glb",
+      "type": "model/gltf-binary",
+      "creator": "Cesium",
+      "license": "CC-BY-4.0",
+      "source": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CesiumMan",
+      "credit": "Cesium Man © 2017 Cesium, CC BY 4.0. Runtime rescaling/material presentation may be modified.",
+      "animation": {
+        "groupIndex": 0,
+        "name": null,
+        "purpose": "walk",
+        "durationSeconds": 1.9583
+      },
+      "scale": "Preserve authored root conversions; normalize world bounds to 1.8m height",
+      "limitations": "Prototype human only; no authored shooting, reload, death or idle animations. Source texture includes Cesium mark subject to preserved trademark notice."
+    },
+    {
+      "id": "concrete-floor",
+      "source": "https://polyhaven.com/a/concrete_floor_02",
+      "creator": "Rob Tuytel / Poly Haven",
+      "license": "CC0-1.0",
+      "resolution": 1024,
+      "color": "/assets/concrete-color.jpg",
+      "normalOpenGL": "/assets/concrete-normal.jpg",
+      "occlusionRoughnessMetallic": "/assets/concrete-arm.jpg"
+    },
+    {
+      "id": "corrugated-metal",
+      "source": "https://polyhaven.com/a/corrugated_iron",
+      "creator": "Dimitrios Savva, Jenelle van Heerden / Poly Haven",
+      "license": "CC0-1.0",
+      "resolution": 1024,
+      "color": "/assets/metal-color.jpg",
+      "normalOpenGL": "/assets/metal-normal.jpg",
+      "occlusionRoughnessMetallic": "/assets/metal-arm.jpg"
+    },
+    {
+      "id": "industrial-sunset",
+      "path": "/assets/industrial-sunset.hdr",
+      "type": "environment/equirectangular-hdr",
+      "creator": "Sergej Majboroda / Poly Haven",
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/industrial_sunset",
+      "resolution": "1k"
+    },
+    {
+      "id": "barlow-fonts",
+      "type": "font/ttf",
+      "creator": "Jeremy Tribby / Barlow Project Authors",
+      "license": "OFL-1.1",
+      "source": "https://github.com/google/fonts/tree/main/ofl/barlow",
+      "stylesheet": "/assets/fonts/fonts.css",
+      "families": [
+        {
+          "family": "Barlow",
+          "weights": [
+            400,
+            500,
+            600,
+            700
+          ]
+        },
+        {
+          "family": "Barlow Condensed",
+          "weights": [
+            500,
+            600,
+            700
+          ]
+        }
+      ],
+      "licenseFiles": [
+        "/assets/fonts/OFL-Barlow.txt",
+        "/assets/fonts/OFL-BarlowCondensed.txt"
+      ]
+    },
+    {
+      "id": "prototype-soldier",
+      "path": "/assets/soldier.glb",
+      "type": "model/gltf-binary",
+      "creator": "Quaternius (Tomas Laulhe)",
+      "license": "CC0-1.0",
+      "source": "https://poly.pizza/m/PpLF4rt4ah",
+      "officialPack": "https://quaternius.com/packs/toonshootergamekit.html",
+      "licenseFile": "/assets/QUATERNIUS-LICENSE.md",
+      "animations": [
+        "Death",
+        "Duck",
+        "HitReact",
+        "Idle",
+        "Idle_Shoot",
+        "Jump",
+        "Jump_Idle",
+        "Jump_Land",
+        "No",
+        "Punch",
+        "Run",
+        "Run_Gun",
+        "Wave",
+        "Yes"
+      ],
+      "modifications": "Removed alternate weapon mesh references; retained attachment transforms; removed CharacterArmature prefix from clip names.",
+      "scale": "Preserve authored root conversions; normalize computed world height.",
+      "limitations": "Stylized prototype soldier, not photoreal. No separate Walk or Reload clip."
+    },
+    {
+      "id": "prototype-rifle",
+      "path": "/assets/rifle.glb",
+      "type": "model/gltf-binary",
+      "creator": "Quaternius (Tomas Laulhe)",
+      "license": "CC0-1.0",
+      "source": "https://poly.pizza/m/K2lXTYFSLC",
+      "officialPack": "https://quaternius.com/packs/ultimategun.html",
+      "licenseFile": "/assets/QUATERNIUS-LICENSE.md",
+      "modifications": "Source GLB unmodified; runtime scaling/materials may differ.",
+      "scale": "Source root scale 100; normalize longest world dimension to appropriate rifle length.",
+      "limitations": "Stylized static rifle, no authored animation."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "network": "testnet",
+  "status": "prepared-offline-awaiting-human-approval",
+  "contractId": "aftermarket-f33ee39d.testnet",
+  "ownerId": "aftermarket-f33ee39d.testnet",
+  "operatorId": "operator.aftermarket-f33ee39d.testnet",
+  "rpcUrl": "https://rpc.testnet.near.org",
+  "faucetUrl": "https://helper.testnet.near.org/account",
+  "wasmPath": "contracts/economy/target/wasm32-unknown-unknown/release/aftermarket_economy.wasm",
+  "wasmBytes": 471212,
+  "wasmSha256": "88c49c667165b2718999f9820af52c506d6af24c9a3a16f02379f9233557136f",
+  "nativeBudget": {
+    "maximumTestNear": "8",
+    "childAccountFundingEach": "0.15",
+    "storageCreditEach": "0.05",
+    "realMoneyOrMainnet": false
+  },
+  "accounts": [
+    {
+      "role": "owner",
+      "accountId": "aftermarket-f33ee39d.testnet",
+      "publicKey": "ed25519:DYtPKK3EC2nvkqE5H1M7MM3EsWS4o6FxJ5Gc6UyAn7on"
+    },
+    {
+      "role": "operator",
+      "accountId": "operator.aftermarket-f33ee39d.testnet",
+      "publicKey": "ed25519:9rVXgZaPKSv8GgQTg2vNWT96EjUQ2LL8rZePZ9SSidZV"
+    },
+    {
+      "role": "mara",
+      "accountId": "mara.aftermarket-f33ee39d.testnet",
+      "publicKey": "ed25519:BcpZRT9EJCm799YZikg3mYPCv2tG3AEWA2XNYV2AWdsF"
+    },
+    {
+      "role": "ivo",
+      "accountId": "ivo.aftermarket-f33ee39d.testnet",
+      "publicKey": "ed25519:3dWiocUJNJZu6JVnzQ9Z9giwGxJxEV2HMRimyNb5t9cM"
+    },
+    {
+      "role": "sable",
+      "accountId": "sable.aftermarket-f33ee39d.testnet",
+      "publicKey": "ed25519:7A4y6Jb4F9Vhi6YhrjvjSQskzbKDDU8ojyZkcXpu6B9t"
+    },
+    {
+      "role": "harbor",
+      "accountId": "harbor.aftermarket-f33ee39d.testnet",
+      "publicKey": "ed25519:GWapv51g3y73NQQnHvjLVm7fZ3VPLBZfTYx3qq8FgHMq"
+    },
+    {
+      "role": "pilot",
+      "accountId": "pilot.aftermarket-f33ee39d.testnet",
+      "publicKey": "ed25519:8noFAW3f5UoqAivesCiR4WyyGx8pDYubYwrHeXuPs7J6"
+    }
+  ],
+  "steps": [
+    "Request free testnet faucet creation of the owner account with its public key. Stop if funding is insufficient; never buy or bridge funds.",
+    "Create six child accounts using their prepared public keys, funding each with 0.15 testnet NEAR.",
+    "Deploy exactly the SHA-256-pinned WASM and initialize owner_id and operator_id atomically in one transaction.",
+    "Prepay 0.05 testnet NEAR storage credit for each of the seven accounts.",
+    "Issue demo credits: pilot 920, Mara 2400, Ivo 1600, Sable 1300, Harbor 2200. These are game credits, not redeemable currency.",
+    "Mint unique pistol DP-0042 to pilot and unique rifle R-042 to Harbor. Mint pilot ammo 160 and parts 8.",
+    "Delegate NPC spending caps matching their initial game-credit balances. The operator can settle raids and spend only delegated NPC budgets.",
+    "Read back balances, token ownership and budgets; record transaction hashes. Configure the read-only ledger panel only after verification."
+  ],
+  "trust": [
+    "This demo keeps all testnet signing keys on this PC, outside the project. It is not independent NPC custody.",
+    "The owner can upgrade the contract and change spending caps. The operator is trusted for issuance, loot assignment and raid results.",
+    "The local game is not automatically migrated by deploying this contract. A verified settlement bridge is a separate implementation step."
+  ]
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/assets/fonts/barlow-400.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(/assets/fonts/barlow-500.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(/assets/fonts/barlow-600.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(/assets/fonts/barlow-700.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(/assets/fonts/barlow-condensed-500.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(/assets/fonts/barlow-condensed-600.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(/assets/fonts/barlow-condensed-700.ttf) format('truetype');
+}

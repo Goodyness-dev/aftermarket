@@ -1,0 +1,169 @@
+{
+  "status": "verified",
+  "network": "testnet",
+  "contractId": "aftermarket-f33ee39d.testnet",
+  "kind": "scripted-server-engine integration; not human play footage",
+  "verifiedAt": "2026-11-14T03:13:36.799Z",
+  "tokenId": "R-042",
+  "initialOwner": "harbor.aftermarket-f33ee39d.testnet",
+  "finalOwner": "pilot.aftermarket-f33ee39d.testnet",
+  "path": [
+    "Harbor guard",
+    "pilot extraction",
+    "player listing escrow",
+    "Mara NPC purchase",
+    "Harbor procurement",
+    "Harbor guard",
+    "pilot extraction"
+  ],
+  "uniqueSupply": "1",
+  "totalCreditSupply": "8420",
+  "pilotCredits": 1420,
+  "npcBudgets": {
+    "mara": 1900,
+    "ivo": 1600,
+    "sable": 1300,
+    "harbor": 1550
+  },
+  "transactions": [
+    {
+      "id": "verified-loop:initial-deploy:reserve",
+      "hash": "9GcM9sjrrTYDX6mzhggG2JWLHq2XJmiL54RGccpTowCn",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"aftermarket\",\"version\":\"1.0.0\",\"event\":\"raid_started\",\"data\":[{\"raid_id\":\"ee926dd4-62ff-4503-a45d-51c3efd8156c\",\"player\":\"pilot.aftermarket-f33ee39d.testnet\"}]}"
+        ],
+        "burnt": "287483187883800000000"
+      }
+    },
+    {
+      "id": "verified-loop:initial-deploy:guard:R-042",
+      "hash": "842qGv7ZqKFYM4v3sBwGTma1Ce39J4k4Jxk8pbjAvVXH",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"harbor.aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"aftermarket-f33ee39d.testnet\",\"token_ids\":[\"R-042\"],\"amounts\":[\"1\"],\"memo\":\"raid deployment\"}]}"
+        ],
+        "burnt": "366095776794900000000"
+      }
+    },
+    {
+      "id": "raid-result:ee926dd4-62ff-4503-a45d-51c3efd8156c:settle",
+      "hash": "4WEu8SV935uTpSMbQEDGvPazQ1t6EDJLntaM4vCzeQSv",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"pilot.aftermarket-f33ee39d.testnet\",\"token_ids\":[\"R-042\"],\"amounts\":[\"1\"],\"memo\":\"raid outcome\"}]}",
+          "EVENT_JSON:{\"standard\":\"aftermarket\",\"version\":\"1.0.0\",\"event\":\"raid_settled\",\"data\":[{\"raid_id\":\"ee926dd4-62ff-4503-a45d-51c3efd8156c\",\"success\":true,\"player\":\"pilot.aftermarket-f33ee39d.testnet\",\"recovered\":[\"R-042\"]}]}"
+        ],
+        "burnt": "353140694565600000000"
+      }
+    },
+    {
+      "id": "verified-loop:player-listing:listing",
+      "hash": "4s6YoQ1Njf8w75K84Wgqta5n4sgwmsYEtYVZ9nKQcofw",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "1",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"pilot.aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"aftermarket-f33ee39d.testnet\",\"token_ids\":[\"R-042\"],\"amounts\":[\"1\"],\"memo\":\"listing escrow\"}]}",
+          "EVENT_JSON:{\"standard\":\"aftermarket\",\"version\":\"1.0.0\",\"event\":\"listing_opened\",\"data\":[{\"id\":\"1\",\"seller\":\"pilot.aftermarket-f33ee39d.testnet\",\"token_id\":\"R-042\",\"price\":\"500\"}]}"
+        ],
+        "burnt": "362074776268900000000"
+      }
+    },
+    {
+      "id": "verified-loop:npc-purchase:fill:1",
+      "hash": "5th4UtZ7Yha4jcM4b2T3MvvF1R5BbdUn9eSvZwaWhUWe",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"mara.aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"pilot.aftermarket-f33ee39d.testnet\",\"token_ids\":[\"credit\"],\"amounts\":[\"500\"],\"memo\":\"weapon payment\"}]}",
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"mara.aftermarket-f33ee39d.testnet\",\"token_ids\":[\"R-042\"],\"amounts\":[\"1\"],\"memo\":\"listing filled\"}]}",
+          "EVENT_JSON:{\"standard\":\"aftermarket\",\"version\":\"1.0.0\",\"event\":\"listing_filled\",\"data\":[{\"id\":\"1\",\"buyer\":\"mara.aftermarket-f33ee39d.testnet\",\"seller\":\"pilot.aftermarket-f33ee39d.testnet\",\"token_id\":\"R-042\",\"price\":\"500\"}]}"
+        ],
+        "burnt": "447966109027700000000"
+      }
+    },
+    {
+      "id": "verified-loop:harbor-procurement:procure-list:R-042",
+      "hash": "BZPpuzFtD3cDu94Acaf31o39or4Cpq8WYXjKmPeRZRhx",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "2",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"mara.aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"aftermarket-f33ee39d.testnet\",\"token_ids\":[\"R-042\"],\"amounts\":[\"1\"],\"memo\":\"listing escrow\"}]}",
+          "EVENT_JSON:{\"standard\":\"aftermarket\",\"version\":\"1.0.0\",\"event\":\"listing_opened\",\"data\":[{\"id\":\"2\",\"seller\":\"mara.aftermarket-f33ee39d.testnet\",\"token_id\":\"R-042\",\"price\":\"650\"}]}"
+        ],
+        "burnt": "361264532710500000000"
+      }
+    },
+    {
+      "id": "verified-loop:harbor-procurement:procure-pay:R-042",
+      "hash": "6xQY7oxmLaMWNFSANXDHEDzhoTBEtmHtNSxXDRbeQFWJ",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"harbor.aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"mara.aftermarket-f33ee39d.testnet\",\"token_ids\":[\"credit\"],\"amounts\":[\"650\"],\"memo\":\"weapon payment\"}]}",
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"harbor.aftermarket-f33ee39d.testnet\",\"token_ids\":[\"R-042\"],\"amounts\":[\"1\"],\"memo\":\"listing filled\"}]}",
+          "EVENT_JSON:{\"standard\":\"aftermarket\",\"version\":\"1.0.0\",\"event\":\"listing_filled\",\"data\":[{\"id\":\"2\",\"buyer\":\"harbor.aftermarket-f33ee39d.testnet\",\"seller\":\"mara.aftermarket-f33ee39d.testnet\",\"token_id\":\"R-042\",\"price\":\"650\"}]}"
+        ],
+        "burnt": "447760812187300000000"
+      }
+    },
+    {
+      "id": "verified-loop:returning-deploy:reserve",
+      "hash": "6BbB324yj4MKp1eBWbzZdimx1whabL9QBHyTeu7w4PXC",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"aftermarket\",\"version\":\"1.0.0\",\"event\":\"raid_started\",\"data\":[{\"raid_id\":\"7dd79c54-8d91-48cc-967c-44175fcf8188\",\"player\":\"pilot.aftermarket-f33ee39d.testnet\"}]}"
+        ],
+        "burnt": "287711187883800000000"
+      }
+    },
+    {
+      "id": "verified-loop:returning-deploy:guard:R-042",
+      "hash": "CWDNFnsmBcNQrUkVYBtxqNuLPBSohbfXX8BxJw2sjsu8",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"harbor.aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"aftermarket-f33ee39d.testnet\",\"token_ids\":[\"R-042\"],\"amounts\":[\"1\"],\"memo\":\"raid deployment\"}]}"
+        ],
+        "burnt": "366551776794900000000"
+      }
+    },
+    {
+      "id": "raid-result:7dd79c54-8d91-48cc-967c-44175fcf8188:settle",
+      "hash": "21rZa3Kgf4hJnyNmPaGSJqqH6yiBtzxGSqcocAUYKATm",
+      "state": "confirmed",
+      "result": {
+        "state": "confirmed",
+        "value": "",
+        "logs": [
+          "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_transfer\",\"data\":[{\"old_owner_id\":\"aftermarket-f33ee39d.testnet\",\"new_owner_id\":\"pilot.aftermarket-f33ee39d.testnet\",\"token_ids\":[\"R-042\"],\"amounts\":[\"1\"],\"memo\":\"raid outcome\"}]}",
+          "EVENT_JSON:{\"standard\":\"aftermarket\",\"version\":\"1.0.0\",\"event\":\"raid_settled\",\"data\":[{\"raid_id\":\"7dd79c54-8d91-48cc-967c-44175fcf8188\",\"success\":true,\"player\":\"pilot.aftermarket-f33ee39d.testnet\",\"recovered\":[\"R-042\"]}]}"
+        ],
+        "burnt": "353596694565600000000"
+      }
+    }
+  ],
+  "gasBudgetUsedYocto": "3633645548683000000000"
+}

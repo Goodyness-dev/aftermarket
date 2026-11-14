@@ -1,0 +1,17 @@
+# Browser visual check
+
+Observed Chrome production preview at http://127.0.0.1:3001 on 2026-11-14 using computer use. The landing scene rendered the port, containers, ground materials, typography and entry controls. Entering practice rendered the animated soldier player, distant guards and raid HUD. Opening the operator brief displayed the graphics quality control and live performance readout.
+
+Observed high-preset readings were 53 FPS / 543 active meshes on the landing scene and 41 FPS / 641 active meshes in the raid while the brief was open. These are point observations on this PC, not a sustained benchmark or a minimum-FPS guarantee. The viewport screenshot was approximately 978 by 553 pixels. The art is visibly stylized/procedural and does not meet the intended realistic final art ambition.
+
+The test practice raid was abandoned through the UI after the rendering check; it did not touch the testnet pilot or on-chain property. Full movement/aiming playthrough, inspection-model verification, responsive checks, recorded footage and sustained combat performance measurements remain open. The test browser practice save is now missing its carried pistol; it still has 920 credits to buy another weapon from the market.
+
+Inspection follow-up: bought practice rifle DP-0043 for 781 local credits and opened its 3D viewer. The imported rifle, serial plate, condition and provenance appeared; a mouse drag visibly rotated the model. The current practice test save has this rifle and 139 credits. Screenshot: [rifle inspection](screenshots/rifle-inspection.png). No testnet transactions were used for this check.
+
+An older page initially failed to fetch its inspection JavaScript after the dist directory had been rebuilt, causing React to unmount the UI. Reloading the current build restored inspection. InspectionBoundary now isolates lazy-viewer errors and offers return-to-depot or refresh controls. This recovery UI still needs a browser failure-injection check; normal model rendering and drag rotation were directly observed.
+
+Recovery follow-up: temporarily moved the current built WeaponViewer module out of the asset directory, then clicked inspection in a freshly loaded client. The “Inspection could not load” fallback appeared; RETURN TO DEPOT dismissed it and retained the visible inventory and balances. The module was restored immediately afterward. Screenshot: [inspection recovery](screenshots/inspection-recovery.png). This directly verifies the previously outstanding browser error path.
+
+Input follow-up: browser automation supplied a 1.5-second W press and the raid view changed, but mouse capture/firing was not established; the stationary follow-up left the magazine unchanged. Native-window observation showed the foreground browser was on another tab, so background-input limitations remain a possible cause. No successful firing or extraction playtest is claimed. A lost-gear result was observed and captured in screenshots/practice-raid-result.png. The practice recovery kit was then verified through the UI. Current foreground applications were left untouched.
+
+Combat feedback code review found guard shot IDs were based on equal-length guard names and collided within one tick. IDs now include a distinct per-guard slot and a separate event timestamp. The renderer ignores old events instead of replaying stale tracers/audio after their cache entries expire. A focused engine check verifies three simultaneous guards retain distinct event identities.

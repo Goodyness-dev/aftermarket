@@ -1,0 +1,22 @@
+{
+  "status": "verified",
+  "kind": "compiled production HTTP service and real testnet credit payment",
+  "verifiedAt": "2026-11-14T06:46:56.438Z",
+  "contractId": "aftermarket-f33ee39d.testnet",
+  "accountId": "pilot.aftermarket-f33ee39d.testnet",
+  "ammo": 220,
+  "credits": 1330,
+  "checks": [
+    "registered inventory projection",
+    "confirmed 90-credit ammunition payment",
+    "duplicate command idempotency",
+    "cross-origin command rejected",
+    "forged extraction/reward rejected",
+    "exclusive pilot lease"
+  ],
+  "transaction": {
+    "id": "production-api-smoke-ammo-v1:service-payment",
+    "hash": "BXnKtDp1WZguENzACSVxmhoNh3EVqY6hLSQo9BeUb9hE",
+    "state": "confirmed"
+  }
+}
